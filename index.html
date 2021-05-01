@@ -2,6 +2,26 @@
   <head><title>Hamro khata</title></head>
   <body>
     <h1>hamro khata</h1>
+    Total expanditure <p id ="Total">Total</p>
+    <script="text/javascript">
+    var aashish=[["food",100],["thing",500]]
+var aashishTotal=0;
+
+function updateAashish(item,cost){
+aashish.push([item,cost]);
+}
+
+updateAashish("meat",500);
+for (var i=0;i< aashish.length;i++){
+ 
+
+  aashishTotal+=aashish[i][1];
+ //  console.log(aashish[i][0]+" :  " +aashish[i][1]);
+}
+console.log("...............\ntotal = " + aashishTotal);
+    document.getElementById("Total").innerHTML = aashishTotal</script>
+    
+    
     Coming soon...
     Aashish Rai
   </body>
