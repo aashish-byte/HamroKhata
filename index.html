@@ -7,6 +7,26 @@
     <h1>hamro khata</h1>
     <div class="lightblue">
     Total expanditure <p id ="Total">Total</p>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+
+      <script id="main">
+        var firebaseConfig = {
+          apiKey: "AIzaSyAaTbvHxP0N5qzkuf6sgSkHTUaxexE3q_E",
+          authDomain: "hamrokhata-d7fec.firebaseapp.com",
+          databaseURL: "https://hamrokhata-d7fec-default-rtdb.firebaseio.com",
+          projectId: "hamrokhata-d7fec",
+          storageBucket: "hamrokhata-d7fec.appspot.com",
+          messagingSenderId: "485529263571",
+          appId: "1:485529263571:web:170e5c095012e29080a326",
+          measurementId: "G-4FC4HF20TT"
+        };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+      </script>
+      
     <script type="text/javascript">
     var aashish=[["food",100],["thing",500]]
 var aashishTotal=0;
