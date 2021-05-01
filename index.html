@@ -30,10 +30,10 @@
         name : "aashish",
         expense : 500}
         
-        var DBref = firebase.database().ref("records");
-        
-        
-        DBref.set(data);
+        var userID ="userID"
+        var firebaseRef = firebase.database()
+        firebaseRef.ref('users/'+userID)
+        firebaseRef.set(data)
 
       
     </div>
