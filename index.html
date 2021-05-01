@@ -34,17 +34,21 @@ aashish.push([item,cost]);
 
 updateAashish("meat",500);
 for (var i=0;i< aashish.length;i++){
- 
-
   aashishTotal+=aashish[i][1];
  //  console.log(aashish[i][0]+" :  " +aashish[i][1]);
 }
 //console.log("...............\ntotal = " + aashishTotal);
     document.getElementById("Total").innerHTML = aashishTotal;
-     firebase.database().ref('users/' + "Aashish").set({
-    username: "aashish",
-    expenses: aashishTotal
-  });
+        var data={
+        
+        name = "aashish",
+        expense = aashishTotal}
+        
+        var database = firebase.database();
+        var ref =  firebase.ref("records");
+        
+        ref.push(data);
+
       
     </div>
       </script>
