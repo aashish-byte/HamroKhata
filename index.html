@@ -2,16 +2,17 @@
   <head>
     <title>Hamro khata</title>
   <link  rel="stylesheet" type="text/css" href="styles.css"/>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
   </head>
   <body>
     <h1>hamro khata</h1>
     <div class="lightblue">
     Total expanditure <p id ="Total">Total</p>
-<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
 
-      <script id="main">
+
+      <script>
         var firebaseConfig = {
           apiKey: "AIzaSyAaTbvHxP0N5qzkuf6sgSkHTUaxexE3q_E",
           authDomain: "hamrokhata-d7fec.firebaseapp.com",
@@ -22,31 +23,17 @@
           appId: "1:485529263571:web:170e5c095012e29080a326",
           measurementId: "G-4FC4HF20TT"
         };
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-    var aashish=[["food",100],["thing",500]]
-var aashishTotal=0;
-
-function updateAashish(item,cost){
-aashish.push([item,cost]);
-}
-
-updateAashish("meat",500);
-for (var i=0;i< aashish.length;i++){
-  aashishTotal+=aashish[i][1];
- //  console.log(aashish[i][0]+" :  " +aashish[i][1]);
-}
-//console.log("...............\ntotal = " + aashishTotal);
-    document.getElementById("Total").innerHTML = aashishTotal;
+    document.getElementById("Total").innerHTML = 500;
         var data={
         name : "aashish",
         expense : 500}
         
-        var database = firebase.database();
-        var ref =  firebase.ref("records");
+        var DBref = firebase.database().ref("records");
         
-        ref.push(data);
+        
+        DBref.set(data);
 
       
     </div>
